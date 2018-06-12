@@ -1,19 +1,28 @@
 <!doctype html>
 <html>
     <head>
-        <title>Distinct - Remove Duplicates</title>
+        <title>List Utilities</title>
+		<link rel="stylsheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css"></link>
     </head>
-    <body>
-        <label for="ignoreCase">Ignore Case:</label>
-        <input id="ignoreCase" type="checkbox"></input>
-        <label for="listSeparator">List Separator:</label>
-        <input id="listSeparator" type="text"></input>
-        <label for="listEncase">List Encase:</label>
-        <input id="listEncase" type="text" value="x"></input>
-        <label for="input">Input:</label>
-        <textarea id="input"></textarea>
-        <label for="output">Output:</label>
-        <textarea id="output"></textarea>
+    <body class="container-fluid">
+		<div class="row">
+			<div class="col">
+				<label for="ignoreCase">Ignore Case:</label>
+				<input id="ignoreCase" type="checkbox"></input>
+				<label for="listSeparator">List Separator:</label>
+				<input id="listSeparator" type="text"></input>
+				<label for="listEncase">List Encase:</label>
+				<input id="listEncase" type="text" value="x"></input>
+			</div>
+			<div class="col">
+				<label for="input">Input:</label>
+				<textarea id="input"></textarea>
+			</div>
+			<div class="col">
+				<label for="output">Output:</label>
+				<textarea id="output"></textarea>
+			</div>
+		</div>
         <script src="node_modules\jquery\dist\jquery.min.js"></script>
         <script src="node_modules\popper.js\dist\umd\popper.min.js"></script>
         <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
