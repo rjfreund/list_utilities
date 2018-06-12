@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Distinct - Remove Duplicates</title>
+    </head>
+    <body>
+        <label for="ignoreCase">Ignore Case:</label>
+        <input id="ignoreCase" type="checkbox"></input>
+        <label for="listSeparator">List Separator:</label>
+        <input id="listSeparator" type="text"></input>
+        <label for="listEncase">List Encase:</label>
+        <input id="listEncase" type="text" value="x"></input>
+        <label for="input">Input:</label>
+        <textarea id="input"></textarea>
+        <label for="output">Output:</label>
+        <textarea id="output"></textarea>
+        <script src="node_modules\jquery\dist\jquery.min.js"></script>
+        <script src="node_modules\popper.js\dist\min\popper.min.js"></script>
+        <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
+        <script src="distinct.js"></script>
+    </body>
+</html>
