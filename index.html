@@ -2,30 +2,35 @@
 <html>
     <head>
         <title>List Utilities</title>
-		<link rel="stylsheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css"></link>
+        <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css"/>
     </head>
     <body class="container-fluid">
-		<div class="row">
-			<div class="col">
-				<label for="ignoreCase">Ignore Case:</label>
-				<input id="ignoreCase" type="checkbox"></input>
-				<label for="listSeparator">List Separator:</label>
-				<input id="listSeparator" type="text"></input>
-				<label for="listEncase">List Encase:</label>
-				<input id="listEncase" type="text" value="x"></input>
-			</div>
-			<div class="col">
-				<label for="input">Input:</label>
-				<textarea id="input"></textarea>
-			</div>
-			<div class="col">
-				<label for="output">Output:</label>
-				<textarea id="output"></textarea>
-			</div>
-		</div>
+        <div class="row">
+            <div class="col">
+                <label for="removeDuplicates">Remove Duplicates:</label>
+                <input id="removeDuplicates" type="checkbox" checked></input>
+                <br/>
+                <label for="ignoreCase">Ignore Case:</label>
+                <input id="ignoreCase" type="checkbox" checked></input>
+                <br/>
+                <label for="listSeparator">List Separator:</label>
+                <textarea id="listSeparator" type="text">,&#10;</textarea>
+                <br/>
+                <label for="listEncase">List Encase:</label>
+                <input id="listEncase" type="text" value="x"></input>
+            </div>
+            <div class="col">
+                    <label for="input">Input:</label>
+                    <textarea id="input"></textarea>
+            </div>
+            <div class="col">
+                    <label for="output">Output:</label>
+                    <textarea id="output"></textarea>
+            </div>
+        </div>
         <script src="node_modules\jquery\dist\jquery.min.js"></script>
         <script src="node_modules\popper.js\dist\umd\popper.min.js"></script>
         <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
-        <script src="distinct.js"></script>
+        <script src="list_utilities.js"></script>
     </body>
 </html>
