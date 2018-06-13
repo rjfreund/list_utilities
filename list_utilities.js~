@@ -2,8 +2,7 @@ var input = document.getElementById('input');
 var output = document.getElementById('output');
 var removeDuplicates = document.getElementById('removeDuplicates');
 var ignoreCase = document.getElementById('ignoreCase');
-var inputListSeparator = document.getElementById('inputListSeparator');
-var outputListSeparator = document.getElementById('outputListSeparator');
+var listSeparator = document.getElementById('listSeparator');
 var listEncase = document.getElementById('listEncase');
 
 Array.prototype.indexOfIgnoreCase = function(string){
@@ -18,14 +17,13 @@ Array.prototype.indexOfIgnoreCase = function(string){
 input.oninput = input.onpropertychange = getList; 
 removeDuplicates.onchange = input.onpropertychange;
 ignoreCase.onchange = input.onpropertychange;
-inputListSeparator.onchange = inputListSeparator.onkeyup = inputListSeparator.onpropertychange = input.onpropertychange;
-outputListSeparator.onchange = outputListSeparator.onkeyup = outputListSeparator.onpropertychange = input.onpropertychange;
+listSeparator.onchange = listSeparator.onkeyup = listSeparator.onpropertychange = input.onpropertychange;
 listEncase.onchange = listEncase.onkeyup = input.onpropertychange;
 
 listEncase.onpropertychange = input.onpropertychange;
 
 function getList(){ output.value = input.value
-    .split(inputListSeparator.value)
+    .split('\n')
     .filter(function(element, index, arr){ 
         input.style.height = 'auto';
         output.style.height = input.style.height;
@@ -34,5 +32,5 @@ function getList(){ output.value = input.value
         return (removeDuplicates.checked) ? (ignoreCase.checked) ? arr.indexOfIgnoreCase(element)===index : arr.indexOf(element)===index : true; 
     }).map(function(element){
         return listEncase.value.replace('x', element); 
-    }).join(outputListSeparator.value); 
+    }).join(listSeparator.value); 
 };
