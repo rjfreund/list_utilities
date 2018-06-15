@@ -1,5 +1,7 @@
 var input = document.getElementById('input');
+var inputCount = document.getElementById('inputCount');
 var output = document.getElementById('output');
+var outputCount = document.getElementById('outputCount');
 var removeDuplicates = document.getElementById('removeDuplicates');
 var ignoreCase = document.getElementById('ignoreCase');
 var inputListSeparator = document.getElementById('inputListSeparator');
@@ -24,9 +26,11 @@ listEncase.onchange = listEncase.onkeyup = input.onpropertychange;
 
 listEncase.onpropertychange = input.onpropertychange;
 
-function getList(){ output.value = input.value
-    .split(inputListSeparator.value)
-    .filter(function(element, index, arr){ 
+function getList(){ 
+    var inputArray = input.value
+    .split(inputListSeparator.value);
+    inputCount.innerText = inputArray.length;
+    var outputArray = inputArray.filter(function(element, index, arr){ 
         input.style.height = 'auto';
         output.style.height = input.style.height;
         input.style.height = input.scrollHeight + 'px';
@@ -34,5 +38,7 @@ function getList(){ output.value = input.value
         return (removeDuplicates.checked) ? (ignoreCase.checked) ? arr.indexOfIgnoreCase(element)===index : arr.indexOf(element)===index : true; 
     }).map(function(element){
         return listEncase.value.replace('x', element); 
-    }).join(outputListSeparator.value); 
+    });
+    outputCount.innerText = outputArray.length;
+    output.value = outputArray.join(outputListSeparator.value); 
 };
